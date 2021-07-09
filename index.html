@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Estilos -->
+	<link rel="stylesheet" href="./css/style.css">
+	<!-- icones -->
+	<script src="https://kit.fontawesome.com/0f7ed121de.js" crossorigin="anonymous"></script>
+	<title>FORM</title>
+</head>
+
+<body>
+	<div class="container" id="container">
+
+		<div class="rotate-container-singin" id="rotate-container-singin">
+			<div class="form-container sign-in-container">
+				<form action="#">
+					<h1>Entrar</h1>
+					<div class="social-container row">
+						<a href="#" class="social btn-facebook"><i class="fab fa-facebook-f"></i></a>
+						<a href="#" class="social btn-google"><i class="fab fa-google-plus-g"></i></a>
+						<a href="#" class="social btn-linkedin"><i class="fab fa-linkedin-in"></i></a>
+					</div>
+					<span>Ou use sua conta</span>
+					<div class="input-container">
+						<i class="fas fa-envelope"></i>
+						<input type="email" placeholder="Email" required />
+					</div>
+					<div class="input-container">
+						<i class="fas fa-key"></i>
+						<input type="password" placeholder="Senha" required />
+					</div>
+					<input type="checkbox" id="remeber" placeholder="" />
+					<label for="remeber">Lembrar</label>
+					<a href="#">Esqueceu sua senha?</a>
+					<button>Entrar</button>
+				</form>
+			</div>
+			<div class="side-container">
+				<div class="flex-panel">
+					<h1>Novo por aqui?</h1>
+					<p>Cadastre uma nova conta para começar usar nossos serviços</p>
+					<a href="#" onclick="document.getElementById('container').classList.add('rotate')"
+						id="signUp">Cadastrar</a>
+				</div>
+			</div> <!-- rotate-container-singin -->
+		</div>
+
+		<div class="rotate-container-singup " id="rotate-container-singup">
+			<div class="form-container sign-up-container">
+				<form action="#">
+					<h1>Criar Conta</h1>
+					<span>Use suas redes sociais</span>
+					<div class="social-container row">
+						<a href="#" class="social btn-facebook"><i class="fab fa-facebook-f"></i></a>
+						<a href="#" class="social btn-google"><i class="fab fa-google-plus-g"></i></a>
+						<a href="#" class="social btn-linkedin"><i class="fab fa-linkedin-in"></i></a>
+					</div>
+					<span>Ou crie uma nova conta</span>
+					<div class="input-container">
+						<i class="fas fa-user"></i>
+						<input type="text" placeholder="Nome" />
+					</div>
+					<div class="input-container">
+						<i class="fas fa-envelope"></i>
+						<input type="email" placeholder="Email" />
+					</div>
+					<div class="input-container">
+						<i class="fas fa-key"></i>
+						<input type="password" placeholder="Senha" />
+					</div>
+					<button>Criar</button>
+				</form>
+			</div>
+
+			<div class="side-container">
+				<div class="flex-panel">
+					<h1>Bem vindo!</h1>
+					<p>
+						Para usar nossos serviços entre com sua conta
+					</p>
+					<a href="#" onclick="document.getElementById('container').classList.remove('rotate');"
+						id="signIn">Entrar</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<p>
+			Created by Rodrigo Brasil
+			<a target="_blank" href="https://github.com/rodrigo-brasil"><strong>Git-Hub</strong></a>
+		</p>
+	</footer>
+</body>
+
+</html>

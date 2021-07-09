@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,800');
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html, body {
+    background: #EAEAE0;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+
+body, input, button {
+    font-family: 'Montserrat', sans-serif;
+}
+
+button, a {
+    cursor: pointer;
+}
+
+div.container {
+    position: relative;
+    width: 700px;
+    height: 430px;
+    box-shadow: 0 0 0px 4px hsl(247, 74%, 84%), 0 0 6px 5px hsl(247, 74%, 74%), 3px 3px 2px 7px hsl(247, 74%, 69%);
+    color: white;
+    background: none;
+    overflow: hidden;
+    border-radius: 110px 10px 90px 10px / 110px 40px 90px 40px;
+    transform: rotateX(0);
+    transition: transform 1s linear, box-shadow 1s linear;
+}
+
+div.rotate {
+    transform: rotateX(180deg);
+    transition: transform 1s linear, box-shadow 1s linear;
+    box-shadow: 0 0 0px 4px hsl(247, 74%, 84%), 0 0 6px 5px hsl(247, 74%, 74%), -3px -3px 2px 7px hsl(247, 74%, 69%);
+}
+
+.rotate-container-singup, .rotate-container-singin {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.rotate-container-singup {
+    opacity: 0;
+    z-index: -10;
+    transform: rotateX(180deg);
+    transition: opacity 1s ease-out, z-index .5s .5s linear;
+}
+
+.rotate-container-singin {
+    opacity: 1;
+    z-index: 10;
+    transition: opacity 1s ease-out, z-index .5s .5s linear;
+}
+
+.rotate .rotate-container-singup {
+    z-index: 10;
+    opacity: 1;
+    transition: opacity 1s ease-out, z-index .5s .5s linear;
+}
+
+.rotate .rotate-container-singin {
+    z-index: -10;
+    opacity: 0;
+    transition: opacity 1s ease-out, z-index .5s .5s linear;
+}
+
+.form-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: auto;
+    left: 0;
+    width: 50%;
+    padding: 30px 40px;
+    background-color: #dfe6e9;
+    color: hsl(244, 98%, 62%);
+    text-align: center;
+}
+
+.form-container span {
+    font-size: 0.83rem;
+    margin: 1em 0 0.3em 0;
+    display: block;
+    text-align: left;
+}
+
+.form-container input[type="email"], .form-container input[type="password"], .form-container input[type="text"] {
+    width: 100%;
+    margin: 3px 0 5px;
+    line-height: 1.5rem;
+    border: none;
+    border-radius: 6px;
+    padding: 0.2em 25px 0.2em .4em;
+}
+
+form h1 {
+    margin-bottom: 1em;
+}
+
+form>a {
+    font-size: 14px;
+    letter-spacing: 0.7px;
+    margin: 15px 0;
+    display: block;
+    color: hsl(244, 98%, 60%);
+}
+
+form>a:hover {
+    text-decoration: underline
+}
+
+form label {
+    font-size: 0.75em
+}
+
+form button {
+    width: 170px;
+    margin-top: 1em;
+    padding: 15px 45px;
+    border-radius: 15px;
+    background: linear-gradient(to right, #a29bfe, #6c5ce7);
+    border: none;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: color 500ms
+}
+
+form button:hover {
+    color: black;
+    background: linear-gradient(to left, hsl(244, 98%, 85%), hsl(247, 74%, 80%));
+    border: 2px solid black;
+    padding: 13px 43px;
+}
+
+form .input-container{
+    position: relative;
+}
+form .input-container> i{
+    position: absolute;
+    top:50%;
+    right:5px;
+    transform: translateY(-50%)
+}
+
+.side-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 50%;
+    width: 50%;
+    padding: 30px 50px;
+    background: linear-gradient(to right, #a29bfe, #6c5ce7);
+}
+
+.row{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flex-panel {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-panel>* {
+    margin: 1rem auto;
+}
+
+.flex-panel h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.flex-panel a {
+    width: 170px;
+    padding: 13px 45px;
+    border-radius: 15px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    transition: 500ms;
+}
+
+.flex-panel a:hover {
+    filter: invert(1)
+}
+
+.social-container {
+    margin: 0.8rem 0 2rem 0;
+}
+
+.social-container a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    line-height: 40px;
+    box-shadow: 0 0 0 4px #fff, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0px 0px 3px 7px rgba(0, 0, 0, 0.315);
+    margin: 0 1em;
+    color: white
+}
+
+.social {
+    transition: all 250ms
+}
+
+.social:hover {
+    transform: scale(1.2);
+}
+
+.btn-facebook {
+    background-color: #3b5897;
+}
+
+.btn-google {
+    background-color: #de4e3b;
+}
+
+.btn-linkedin {
+    background-color: #00a1db;
+}
+
+.btn-facebook:hover {
+    box-shadow: 0 0 0 4px #3b5897, inset 0 2px 0 rgba(0, 0, 0, 0.08);
+    background-color: #fff;
+    color: #3b5897;
+}
+
+.btn-google:hover {
+    box-shadow: 0 0 0 4px #de4e3b, inset 0 2px 0 rgba(0, 0, 0, 0.08);
+    background-color: #fff;
+    color: #de4e3b;
+}
+
+.btn-linkedin:hover {
+    box-shadow: 0 0 0 4px #00a1db, inset 0 2px 0 rgba(0, 0, 0, 0.08);
+    background-color: #fff;
+    color: #00a1db;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 55px;
+    border-top: 2px solid silver;
+}
